@@ -46,10 +46,11 @@ input[type=password] {
 </script>
 </head>
 <body>
+	<s:actionerror/>
 	<div
 		style="width: 900px; height: 50px; position: absolute; text-align: left; left: 50%; top: 50%; margin-left: -450px;; margin-top: -280px;">
 		<img src="${pageContext.request.contextPath }/images/logo.png" style="border-width: 0; margin-left: 0;" />
-		<span style="float: right; margin-top: 35px; color: #488ED5;">新BOS系统以宅急送开发的ERP系统为基础，致力于便捷、安全、稳定等方面的客户体验</span>
+		<span style="float: right; margin-top: 35px; color: #488ED5;">人力资源管理系统</span>
 	</div>
 	<div class="main-inner" id="mainCnt"
 		style="width: 900px; height: 440px; overflow: hidden; position: absolute; left: 50%; top: 50%; margin-left: -450px; margin-top: -220px; background-image: url('${pageContext.request.contextPath }/images/bg_login.jpg')">
@@ -60,7 +61,7 @@ input[type=password] {
 			</div>
 			<div class="loginForm">
 				<form id="loginform" name="loginform" method="post" class="niceform"
-					action="">
+					action="${pageContext.request.contextPath }/userAction_login.action">
 					<div id="idInputLine" class="loginFormIpt showPlaceholder"
 						style="margin-top: 5px;">
 						<input id="loginform:idInput" type="text" name="username"
@@ -82,7 +83,7 @@ input[type=password] {
 							<img id="loginform:vCode" src="${pageContext.request.contextPath }/validatecode.jsp"
 								onclick="javascript:document.getElementById('loginform:vCode').src='${pageContext.request.contextPath }/validatecode.jsp?'+Math.random();" />
 						</div>
-						<a href="${pageContext.request.contextPath}/page_common_index.action" id="loginform:j_id19" name="loginform:j_id19">
+						<a onclick="document.forms[0].submit()" id="loginform:j_id19" name="loginform:j_id19">
 						<span
 							id="loginform:loginBtn" class="btn btn-login"
 							style="margin-top:-36px;">登录</span>
@@ -97,7 +98,7 @@ input[type=password] {
 		<span style="color: #488ED5;">Powered By www.itcast.cn</span><span
 			style="color: #488ED5;margin-left:10px;">推荐浏览器（右键链接-目标另存为）：<a
 			href="http://download.firefox.com.cn/releases/full/23.0/zh-CN/Firefox-full-latest.exe">Firefox</a>
-		</span><span style="float: right; color: #488ED5;">宅急送BOS系统</span>
+		</span><span style="float: right; color: #488ED5;">人力资源管理系统</span>
 	</div>
 </body>
 </html>
